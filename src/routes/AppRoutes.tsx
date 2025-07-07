@@ -1,12 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import routeConfig from "./routesConfig";
 import { Suspense } from "react";
+import routeConfig from "../configs/routesConfig";
 
 const AppRoutes = () => {
   return (
     <Routes>
       {routeConfig.map(({ path, element, children }) => (
-        // allowedRoles as string[])?.includes("Guest") ? (
         <Route
           key={path}
           path={path}

@@ -8,11 +8,9 @@ export const themeConfig: ThemeConfig = {
       padding: 4,
       colorBgContainer: "#ECDDD5", //cream
       colorText: "#2C0715", //wine
-      colorTextBase: 'blue',
       fontWeight: 500,
       defaultHoverBg: "#7F163D", //rose
       colorBorder: "#2C0715", //wine
-      
     },
     Typography: {
       fontSize: 12,

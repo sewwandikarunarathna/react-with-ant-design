@@ -14,7 +14,7 @@ type Props = {
 const SharedCard = (props: Props) => {
   return (
     <>
-      <Card className={props.className} size={props.size ?? 'small'} title={props.title} variant={props.variant} style={{ width: props.width ?? 300 }}>
+      <Card className={props.className} size={props.size ?? 'small'} title={props.title} variant={props.variant} style={{ width: props.width }}>
         {props.children}
       </Card>
     </>

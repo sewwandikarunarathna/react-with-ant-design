@@ -7,6 +7,7 @@ interface AntProps  {
   variant?: "text" | "outlined" | "contained" | any;
   icon?: any;
   className?: string;
+  htmlType?: "button" | "submit" | "reset" | undefined;
   children?: any;
   disabled?: boolean;
   onClick?: any;
@@ -23,6 +24,7 @@ const SharedButton = (props: AntProps) => {
         className={props.className}
         size={props.size}
         variant={props.variant}
+        htmlType={props.htmlType}
       >
         {props.children}
         </Button>
