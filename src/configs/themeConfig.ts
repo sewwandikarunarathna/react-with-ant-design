@@ -20,10 +20,11 @@ export const themeConfig: ThemeConfig = {
       itemMarginBottom: 0, // Default is 24px
     },
     Breadcrumb: {
-      fontSize: 16,
+      fontSize: 14,
       linkColor: "#1890ff",
-      separatorColor: "rgba(0, 0, 0, 0.45)",
-      lastItemColor: "rgba(0, 0, 0, 0.85)",
+      separatorColor: "#2C0715", //wine
+      lastItemColor: "#B95929", //copper
+      linkHoverColor: "blue"
     }
   },
   token: {
@@ -33,5 +34,6 @@ export const themeConfig: ThemeConfig = {
     colorTextSecondary: "#2C0715",
     borderRadius: 5,
     fontFamily: "'Inter', 'Open Sans', sans-serif",
+    colorBgContainer: "#ECDDD5",
   },
 };

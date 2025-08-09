@@ -6,6 +6,16 @@ import { Alert, ConfigProvider } from 'antd';
 import SharedCheckbox from '../../shared/SharedCheckbox';
 import SharedCard from '../../shared/SharedCard';
 import SharedForm from '../../shared/SharedForm';
+import SharedBreadcrumb from '../../shared/SharedBreadcrumb';
+
+ const breadcrumbItems = [
+    {
+      title: <a href="/">Home</a>,
+    },
+    {
+      title: <a href="/form">Form</a>,
+    },
+  ]; 
 
 const Form = () => {
 const [formErrors, setFormErrors] = useState<any>({});
@@ -14,7 +24,7 @@ const [formErrors, setFormErrors] = useState<any>({});
     const specialTheme = {
       components: {
         Form: {
-          itemMarginBottom: 8, // Default is 24px
+          itemMarginBottom: 12, // Default is 24px
         },
       },
     };
@@ -45,6 +55,8 @@ const [formErrors, setFormErrors] = useState<any>({});
 
   return (
     <SharedCard className="flex flex-col w-auto h-auto justify-start items-center mt-6 p-2 bg-amber-300">
+        <SharedBreadcrumb items={breadcrumbItems}/>
+
       <h2 className="flex text-2xl font-bold mb-4 justify-center text-center">Authentication Form</h2>
       <p className="flex justify-center text-sm text-gray-500 mb-4">
         Please fill in the details below

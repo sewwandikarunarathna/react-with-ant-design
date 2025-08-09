@@ -1,4 +1,5 @@
 import { Card } from "antd";
+import { useTheme } from "../../contexts/ThemeContext";
 
 type Props = {
   children: any;
@@ -12,9 +13,20 @@ type Props = {
 };
 
 const SharedCard = (props: Props) => {
+  const { theme } = useTheme();
+  
+  // Extract primary color from theme
+  const primaryColor = theme.token?.colorPrimary || '#1890ff';
+
+  // Create dynamic styles based on theme
+  const cardStyle = {
+    borderColor: primaryColor,
+    borderRadius: theme.token?.borderRadius || 4,
+  };
+
   return (
     <>
-      <Card className={props.className} size={props.size ?? 'small'} title={props.title} variant={props.variant} style={{ width: props.width }}>
+      <Card style={{...cardStyle, width: props.width}} onClick={props.onClick} className={props.className} size={props.size ?? 'small'} title={props.title} variant={props.variant}>
         {props.children}
       </Card>
     </>

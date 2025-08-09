@@ -3,6 +3,7 @@ import SharedButton from "./shared/SharedButton";
 import SharedCard from "./shared/SharedCard";
 import { useNavigate } from "react-router-dom";
 import { ConfigProvider } from "antd";
+import SharedBreadcrumb from "./shared/SharedBreadcrumb";
 
 // Special theme just for this page
 const specialTheme = {
@@ -16,12 +17,22 @@ const specialTheme = {
   },
 };
 
+ const breadcrumbItems = [
+    {
+      title: "Home",
+    },
+    {
+      title: <a href="/about">About</a>,
+    },
+  ];  
+
 const AboutPage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="flex flex-col justify-start items-center gap-3 w-full min-h-screen bg-cream py-6 px-5">
       <div className="flex flex-row justify-end items-start w-full p-4">
+        <SharedBreadcrumb items={breadcrumbItems}/>
         <ConfigProvider theme={specialTheme}>
           <SharedButton onClick={() => navigate("/")}>
             Back to home

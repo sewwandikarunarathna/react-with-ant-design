@@ -2,6 +2,7 @@ import { lazy } from "react";
 
 const WelcomePage = lazy(() => import("../components/WelcomePage.tsx"));
 const AboutPage = lazy(() => import("../components/AboutPage.tsx"));
+const CustomizedStylesPage = lazy(() => import("../components/CustomizedStylesPage.tsx"));
 const Form = lazy(() => import("../components/design/form/Form.tsx"));
 const NotFound = lazy(() => import("../components/NotFoundPage.tsx"));
 
@@ -22,6 +23,12 @@ const routeConfig: RoutesType[] = [
     path: "/about",
     element: (
         <AboutPage />
+    ),
+  }, 
+   {
+    path: "/custom-styles",
+    element: (
+        <CustomizedStylesPage />
     ),
   },  
   {
